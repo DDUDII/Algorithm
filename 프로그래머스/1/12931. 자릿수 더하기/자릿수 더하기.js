@@ -1,10 +1,8 @@
 function solution(n)
 {
-  const str = String(n)
-  const mapfn = (arg) => Number(arg)
-  const arr = Array.from(str, mapfn)
+ const arr = n.toString().split('');
 
-  const sum = arr.reduce((total, value) => total + value, 0);
+  const sum = arr.reduce((total, value) => total + Number(value), 0);
 
   return sum;
 }
